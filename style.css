@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+}
+
+:root {
+  --font-color-: #6bd060;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: linear-gradient(
+    0.375turn,
+    black,
+    rgb(70, 82, 72),
+    rgb(115, 115, 115)
+  );
+  background-attachment: fixed;
+}
+
+.userSelect {
+  user-select: none;
+}
+
+#tabsNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: rgba(201, 233, 203, 0.4);
+  font-size: 1.8rem;
+  padding: 14px;
+  margin-top: 16px;
+  margin-left: -5px;
+}
+
+.tabs {
+  margin-bottom: 26px;
+  cursor: pointer;
+}
+
+#signInTab,
+#signUpTab {
+  margin-left: 2px;
+  display: none;
+}
+
+#newsletterTab,
+#discountTab,
+#leavingTab {
+  display: none;
+}
+
+.close {
+  display: flex;
+  justify-content: right;
+  color: rgba(201, 233, 203, 0.4);
+  font-size: 1.2rem;
+  margin-top: -14px;
+  margin-right: -12px;
+  cursor: pointer;
+}
+
+.close:hover,
+.tabs:hover {
+  color: rgba(201, 233, 203, 0.7);
+}
+
+.close:active,
+.tabs:active {
+  color: rgb(188, 231, 191);
+}
+
+.container {
+  position: relative;
+  max-width: 550px;
+  width: 100%;
+  background-color: #373b37;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  transition: 0.1s;
+}
+
+.container:hover {
+  box-shadow: 0 0 90px rgba(188, 208, 190, 0.4);
+}
+
+.container header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--font-color-);
+  font-weight: 400;
+  text-align: center;
+  margin-top: -8px;
+}
+
+.container .form {
+  margin-top: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background: linear-gradient(#2c2f2c1f, #232623c3);
+  padding: 20px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box label {
+  color: var(--font-color-);
+}
+
+.form .input-box input {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  font-size: 1rem;
+  color: #666b68;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+.input-box input:focus {
+  background-color: rgba(208, 241, 215);
+  transition: 0.2s;
+  box-shadow: 0 0 15px rgba(208, 241, 215, 0.432);
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form .gender-box {
+  margin-top: 20px;
+}
+
+.gender-box h3 {
+  color: var(--font-color-);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.form .gender {
+  column-gap: 5px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#newsletterIntro,
+#discountIntro {
+  text-align: center;
+  color: rgb(232, 249, 236, 0.9);
+  font-weight: 100;
+  font-size: 1rem;
+  margin-left: 10%;
+  padding-top: 26px;
+  width: 80%;
+}
+
+#leavingIntro {
+  text-align: center;
+  color: rgb(232, 249, 236, 0.9);
+  font-weight: 100;
+  font-size: 1rem;
+  margin-left: 10%;
+  padding: 20px;
+  width: 80%;
+}
+
+input[type="radio"] {
+  accent-color: var(--font-color-);
+  width: 9px;
+  height: 9px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--font-color-);
+  font-weight: 300;
+  transition: 0.5s;
+}
+
+#submit,
+#signInButton,
+#discountButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  height: 55px;
+  width: 80%;
+  color: #373b37;
+  background: linear-gradient(to left, rgb(139, 236, 128), #509348);
+  font-size: 1.6rem;
+  border: none;
+  margin-top: 30px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+#submit:hover,
+#subscribe:hover,
+#signInButton:hover,
+#discountButton:hover,
+#leavingButtonYes:active,
+#leavingButtonNo:active {
+  background: linear-gradient(to left, rgb(119, 216, 108), rgb(60, 127, 52));
+}
+
+#submit:active,
+#subscribe:active,
+#signInButton:active,
+#discountButton:active,
+#leavingButtonYes:active,
+#leavingButtonNo:active {
+  color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to left, rgb(99, 196, 88), rgb(40, 107, 32));
+}
+
+#subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 40px;
+  width: 50%;
+  color: #373b37;
+  background: linear-gradient(to left, rgb(139, 236, 128), #509348);
+  font-size: 1.1rem;
+  border: none;
+  margin-top: 22px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+#leavingButtonYes,
+#leavingButtonNo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 40px;
+  width: 50%;
+  color: #373b37;
+  background: linear-gradient(to left, rgb(139, 236, 128), #509348);
+  font-size: 1.1rem;
+  border: none;
+  margin-top: 22px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+#newsletterContainer {
+  position: relative;
+  max-width: 680px;
+  width: 100%;
+}
+
+#rememberMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(232, 249, 236, 0.9);
+  font-size: 1.1rem;
+  accent-color: var(--font-color-);
+  padding-top: 16px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: rgb(232, 249, 236, 0.9);
+  font-size: 1.1rem;
+  font-weight: 100;
+  bottom: 0;
+  margin-top: auto;
+  padding-top: 40px;
+  width: 100%;
+}
+
+#githubButton {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 2px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+#githubButton:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+#githubButton:active {
+  background-color: rgb(150, 150, 150);
+}
+
+@media only screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 10px;
+  }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f8bb19abd6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="userSelect">
+    <!-- tabs -->
+    <nav id="tabsNav">
+      <div id="signInTab" class="tabs">
+        <div id="signInIcon"><i class="fa-solid fa-user-tie"></i></div>
+      </div>
+      <div id="signUpTab" class="tabs">
+        <div id="userIcon"><i class="fa-solid fa-user-plus"></i></div>
+      </div>
+      <div id="discountTab" class="tabs">
+        <div id="discountIcon"><i class="fa-solid fa-tags"></i></div>
+      </div>
+      <div id="newsletterTab" class="tabs">
+        <div id="mailIcon"><i class="fa-solid fa-envelope"></i></div>
+      </div>
+      <div id="leavingTab" class="tabs">
+        <div id="leavingIcon">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- subscribe -->
+    <section id="newsletterContainer" class="container">
+      <div id="closeNewsletter" class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <header id="newsletterHeader">
+        subscribe&nbsp;
+        <div id="mailIcon"><i class="fa-solid fa-envelope"></i></div>
+      </header>
+      <p id="newsletterIntro">
+        it's okay if you don't subscribe, but you'll miss out on hella freebies
+        and discounts... your choice, not mine.
+      </p>
+      <form id="newsletterForm" class="form" action="#">
+        <div class="column">
+          <div class="input-box">
+            <label>firstName</label>
+            <input type="text" placeholder="misterRoboto" required />
+          </div>
+
+          <div class="input-box">
+            <label>emailAddress</label>
+            <input
+              type="email"
+              placeholder="aiIsForScrubs@hotmail.com"
+              required
+            />
+          </div>
+        </div>
+        <button id="subscribe" type="submit">subscribe</button>
+      </form>
+    </section>
+
+    <!-- sign in -->
+    <section id="signInContainer" class="container">
+      <div id="closeSignIn" class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <header id="signInHeader">
+        signIn&nbsp;
+        <div id="signInIcon"><i class="fa-solid fa-user-tie"></i></div>
+      </header>
+      <form action="#" class="form" id="signInForm">
+        <div class="input-box">
+          <label>username</label>
+          <input type="text" placeholder="misterRoboto" required />
+        </div>
+
+        <div class="input-box">
+          <label>password</label>
+          <input
+            type="password"
+            placeholder="********"
+            minlength="8"
+            maxlength="20"
+            required
+          />
+        </div>
+
+        <button id="signInButton" type="submit">sign in</button>
+
+        <label id="rememberMe">
+          <input type="checkbox" checked="checked" id="rememberMe" />
+          <p>&nbsp;remember me?</p>
+        </label>
+      </form>
+    </section>
+
+    <!-- sign up -->
+    <section id="signUpContainer" class="container">
+      <div id="closeSignUp" class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <header id="signUpHeader">
+        signUp&nbsp;
+        <div id="userIcon"><i class="fa-solid fa-user-plus"></i></div>
+      </header>
+      <form action="#" class="form" id="signUpForm">
+        <div class="input-box">
+          <label>firstName</label>
+          <input type="text" placeholder="misterRoboto" required />
+        </div>
+
+        <div class="input-box">
+          <label>emailAddress</label>
+          <input
+            type="text"
+            placeholder="aiCannotBeStopped@yahoo.com"
+            required
+          />
+        </div>
+
+        <div class="input-box">
+          <label>password</label>
+          <input
+            type="password"
+            placeholder="********"
+            minlength="8"
+            maxlength="20"
+            required
+          />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>phoneNumber</label>
+            <input type="text" placeholder="dontWorryImSingle" required />
+          </div>
+          <div class="input-box">
+            <label>age</label>
+            <input type="number" placeholder="10,000" required />
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>gender</h3>
+          <div class="gender-option" required>
+            <div class="gender">
+              <input type="radio" name="gender" id="male" />
+              <label for="check">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" name="gender" id="female" />
+              <label for="check">female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" name="gender" id="robot" />
+              <label for="check">robot</label>
+            </div>
+          </div>
+        </div>
+
+        <button id="submit" type="submit">sign up</button>
+      </form>
+    </section>
+
+    <!-- discount -->
+    <section id="discountContainer" class="container">
+      <div id="closeDiscount" class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <header id="discountHeader">
+        GET 20% OFF&nbsp;
+        <div id="discountIcon"><i class="fa-solid fa-tags"></i></div>
+      </header>
+      <p id="discountIntro">
+        use the promo code to get 20% off your first order, and we'll donate $1
+        to the Stop AI Foundation to help stop AI from taking over the world.
+      </p>
+      <form id="discountForm" class="form" action="#">
+        <div class="input-box">
+          <label>emailAddress</label>
+          <input
+            type="email"
+            placeholder="ewItSmellsLikeAI@gmail.com"
+            required
+          />
+        </div>
+        <button id="discountButton" type="submit">get 20% off</button>
+      </form>
+    </section>
+
+    <!-- leaving site -->
+    <section id="leavingContainer" class="container">
+      <div id="closeLeaving" class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <header id="leavingHeader">
+        leaving so soon?&nbsp;
+        <div id="leavingIcon">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </header>
+      <form id="leavingForm" class="form" action="#">
+        <p id="leavingIntro">
+          this link will redirect you from our website, are you sure you want to
+          go?
+        </p>
+        <button id="leavingButtonYes" type="submit">continue &rarr;</button>
+        <button id="leavingButtonNo" type="submit">stay here</button>
+      </form>
+    </section>
+
+    <footer>
+      &starf; Templates by&nbsp;
+      <a href="https://github.com/marceosayo" target="_blank"
+        ><button id="githubButton">
+          <img src="github icon.png" width="20px" /> marceosayo
+        </button> </a
+      >&nbsp;&starf;
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
